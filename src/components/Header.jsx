@@ -1,11 +1,26 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
+import Logo1 from './images/Head byte Finale-01.png';
 
 const useStyles = createUseStyles({
     header: {
         position: 'absolute',
         width: '100vw',
-        height: '200px'
+        height: '125px',
+        borderBottom: '1px solid black',
+        backgroundColor: 'gray'
+    },
+    logo: {
+        position: 'absolute',
+        textAlign: 'center',
+        top: 5,
+        left: 5,
+        // margin: '1rem',
+        // padding: '.75rem',
+        height: '100px',
+        width: '100px',
+        border: '1px solid black',
+        borderRadius: '8px'
     },
     navbar: {
         position: 'absolute',
@@ -19,7 +34,7 @@ const useStyles = createUseStyles({
         padding: '.25rem'
     },
     navbarItem: {
-        margin: '1rem'
+        margin: '1rem',
     }
 
 })
@@ -29,7 +44,7 @@ const Header = () => {
 
     return (
         <div className={classes.header}>
-            <div className="Header__Logo">Logo</div>
+            <img className={classes.logo} src={Logo1} alt='Headbyte Studios Logo'/>
             <div className={classes.navbar}>
                 <div className={classes.navbarItem}>Item</div>
                 <div className={classes.navbarItem}>Item</div>
