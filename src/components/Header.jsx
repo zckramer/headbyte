@@ -78,7 +78,7 @@ const useStyles = createUseStyles({
 });
 
 // TODO: Abstract the Navigation out
-const Header = () => {
+const Header = (props) => {
     const [showNavbar, setShowNavbar] = useState(true);
 
     function toggleNavbar () {
@@ -91,13 +91,32 @@ const Header = () => {
     return (
         <div className={classes.header}>
             <img className={classes.logo} src={Logo1} alt='Headbyte Studios Logo'/>
-            <h1>HeadByte Studios</h1>
                 <div className={showNavbar ? classes.navbarShow : classes.navbarHide}>
-                    <div className={classes.toggleButton} onClick={()=>toggleNavbar()}>{showNavbar ? '>' : '<'}</div>
-                    <img className={classes.navbarItem} src={DT_Thumb} alt='Nav Link to Dread Tides section'/>
-                    <img className={classes.navbarItem} src={HB_Thumb} alt='Nav Link to HeadByte Home section'/>
-                    <div className={classes.navbarItem}>Item</div>
-                    <div className={classes.navbarItem}>Item</div>
+                    <div 
+                        className={classes.toggleButton} 
+                        onClick={()=>toggleNavbar()}>
+                        {showNavbar ? '>' : '<'}
+                    </div>
+                    <img 
+                        className={classes.navbarItem} 
+                        src={HB_Thumb} 
+                        alt='Nav Link to HeadByte Home section'
+                        onClick={()=>props.navigation(0)}
+                    />
+                    <img 
+                        className={classes.navbarItem} 
+                        src={DT_Thumb} 
+                        alt='Nav Link to Dread Tides section'
+                        onClick={()=>props.navigation(1)}
+                    />
+                    <div 
+                        className={classes.navbarItem}>
+                        Item
+                    </div>
+                    <div 
+                        className={classes.navbarItem}>
+                        Item
+                    </div>
                 </div>
         </div>
     );
