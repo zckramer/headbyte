@@ -11,7 +11,8 @@ const useStyles = createUseStyles({
         height: '120px',
         borderBottom: '1px solid black',
         backgroundColor: 'gray',
-        textAlign: 'center'
+        textAlign: 'center',
+        zIndex: 2
     },
     logo: {
         position: 'absolute',
@@ -27,7 +28,7 @@ const useStyles = createUseStyles({
         position: 'fixed',
         top: 10,
         right: 0,
-        border: '1px solid black',
+        border: '2px solid lightgray',
         borderRadius: '8px 0px 0px 8px',
         display: 'flex',
         flexDirection: 'row',
@@ -41,7 +42,7 @@ const useStyles = createUseStyles({
         position: 'fixed',
         top: 10,
         right: -300,
-        border: '1px solid black',
+        border: '2px solid lightgrey',
         borderRadius: '8px 0px 0px 8px',
         display: 'flex',
         flexDirection: 'row',
@@ -49,7 +50,6 @@ const useStyles = createUseStyles({
         padding: '.1rem',
         backgroundColor: 'black',
         maxHeight: '80px',
-        // transition: '.3s ease-in-out',
         animation: '$closeNav .3s ease-in-out',
     },
     navbarItem: {
@@ -71,7 +71,7 @@ const useStyles = createUseStyles({
         left: -15,
         top: '25px',
         backgroundColor: 'white',
-        border: '3px solid black',
+        border: '3px solid lightgrey',
         borderRadius: '8px 0 0 8px',
         cursor: 'pointer',
         userSelect: 'none',
