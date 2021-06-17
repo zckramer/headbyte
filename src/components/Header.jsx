@@ -59,13 +59,7 @@ const useStyles = createUseStyles({
     },
     toggleButton: {
         '&:hover': {
-<<<<<<< HEAD
-            transform: 'scale(1.05)',
-            color: 'blue',
-            transition: 'ease-in-out',
-=======
             transform: 'scale(1.1)',
->>>>>>> basic-header
         },
         transition: '.5s cubic-bezier(.87,0,.27,1.55)',
         position: 'absolute',
