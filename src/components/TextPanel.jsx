@@ -19,7 +19,7 @@ const useStyles = createUseStyles({
         left: '15px',
         width: '70%',
         maxHeight: '100%',
-        borderRadius: '3px 0 0 3px',
+        borderRadius: '4px 0 0 4px',
         padding: '8px',
         minHeight: '130px',
     },
@@ -57,7 +57,7 @@ const useStyles = createUseStyles({
         top: '40px',
         right: '15px',
         width: '18%',
-        borderRadius: '0 3px 3px 0',
+        borderRadius: '0 4px 4px 0',
         padding: '8px',
         minHeight: '130px',
     },
@@ -67,11 +67,17 @@ const useStyles = createUseStyles({
         right: 0
     },
     purchaseButton: {
+        '&:hover': {
+            boxShadow: '2px 2px #47613f',
+        },
+        position: 'relative',
+        bottom: '0px',
         backgroundImage: 'linear-gradient(#47613f, #2f4128)',
         color: 'yellow',
         border: '2px solid black',
-        borderRadius: '3px',
-        padding: '1rem'
+        borderRadius: '5px',
+        padding: '1.2rem',
+        cursor: 'pointer'
     }
 })
 
@@ -94,7 +100,8 @@ const TextPanel = (props) => {
                 <p className={classes.panel4}>
                     {props.p4}
                 </p>
-                <div className={classes.purchaseButton}>
+                <div className={classes.purchaseButton}
+                     onClick={()=>window.open('https://store.steampowered.com/app/1256510/Dreadtides/')}   >
                     Purchase
                 </div>
 

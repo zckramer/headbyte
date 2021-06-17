@@ -55,9 +55,10 @@ const useStyles = createUseStyles({
         maxHeight: '100%'
     },
     toggleButton: {
-        '&:hover $toggleHover': {
-            transform: '1.1rem',
-            color: 'blue'
+        '&:hover': {
+            transform: 'scale(1.05)',
+            color: 'blue',
+            transition: 'ease-in-out',
         },
         position: 'absolute',
         left: -15,

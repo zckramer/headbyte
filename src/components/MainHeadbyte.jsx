@@ -6,8 +6,6 @@ const useStyles = createUseStyles({
     body: {
         position: 'absolute',
         top: '120px',
-        // backgroundColor: 'black',
-        // color: 'white',
         width: '100%',
         height: '100%',
         textAlign: 'center'
