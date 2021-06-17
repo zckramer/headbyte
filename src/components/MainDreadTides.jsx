@@ -16,11 +16,12 @@ const useStyles = createUseStyles({
 
 const MainDreadTides = () => {
     const classes = useStyles();
-    const twitterFeed = '<a class="twitter-timeline" data-width="1200" data-height="900" href="https://twitter.com/DreadTides?ref_src=twsrc%5Etfw">Tweets by DreadTides</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
     return (
         <div className={classes.body}>
             <h1>Dread Tides</h1>
+
             <Timeline
+                className='TwitterFeed'
                 dataSource={{
                     sourceType: 'profile',
                     screenName: 'DreadTides'
@@ -30,7 +31,6 @@ const MainDreadTides = () => {
                     width: '800'
                 }}
             />
-            {/* <div className='TwitterFeed' dangerouslySetInnerHTML={{__html: twitterFeed}}></div> */}
         </div>
     )
 }
