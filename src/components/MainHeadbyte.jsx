@@ -21,10 +21,14 @@ const MainHeadbyte = () => {
         <div className={classes.body}>
             <h1>HeadByte Studios</h1>
             <TextPanel
-                title='Coming soon from HeadByte:'
-                p1='Dread Tides'
+                title='Dread Tides'
+                p1='Coming Soon from HeadByte Studios'
                 p2='A real-time strategy games with tower-defence elements. '
-                p3={<a href='https://store.steampowered.com/app/1256510/Dreadtides/'>Available now as early-access on Steam!</a>}
+                p3={<a  href='https://store.steampowered.com/app/1256510/Dreadtides/' 
+                        style={{all: 'inherit', cursor: 'pointer'}}>
+                            Available now as early-access on Steam!
+                    </a>}
+                p4='Available'
             />
         </div>
     )
