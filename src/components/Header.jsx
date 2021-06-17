@@ -53,13 +53,18 @@ const useStyles = createUseStyles({
         animation: '$closeNav .3s ease-in-out',
     },
     navbarItem: {
+        '&:hover': {
+            cursor: 'pointer',
+            transform: 'scale(1.4)'
+        },
+        transition: '.1s',
         margin: '1rem',
         maxWidth: '60px',
         maxHeight: '100%'
     },
     toggleButton: {
         '&:hover': {
-            transform: 'scale(1.1)',
+            backgroundColor: 'yellow',
         },
         transition: '.5s cubic-bezier(.87,0,.27,1.55)',
         position: 'absolute',
