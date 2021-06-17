@@ -25,8 +25,8 @@ const useStyles = createUseStyles({
     },
     navbarShow: {
         position: 'fixed',
-        right: 0,
         top: 10,
+        right: 0,
         border: '1px solid black',
         borderRadius: '8px 0px 0px 8px',
         display: 'flex',
@@ -35,11 +35,12 @@ const useStyles = createUseStyles({
         padding: '.1rem',
         backgroundColor: 'black',
         maxHeight: '80px',
+        animation: '$openNav .3s ease-in-out',
     },
     navbarHide: {
         position: 'fixed',
-        right: -300,
         top: 10,
+        right: -300,
         border: '1px solid black',
         borderRadius: '8px 0px 0px 8px',
         display: 'flex',
@@ -48,6 +49,8 @@ const useStyles = createUseStyles({
         padding: '.1rem',
         backgroundColor: 'black',
         maxHeight: '80px',
+        // transition: '.3s ease-in-out',
+        animation: '$closeNav .3s ease-in-out',
     },
     navbarItem: {
         margin: '1rem',
@@ -56,10 +59,15 @@ const useStyles = createUseStyles({
     },
     toggleButton: {
         '&:hover': {
+<<<<<<< HEAD
             transform: 'scale(1.05)',
             color: 'blue',
             transition: 'ease-in-out',
+=======
+            transform: 'scale(1.1)',
+>>>>>>> basic-header
         },
+        transition: '.5s cubic-bezier(.87,0,.27,1.55)',
         position: 'absolute',
         left: -15,
         top: '25px',
@@ -69,12 +77,14 @@ const useStyles = createUseStyles({
         cursor: 'pointer',
         userSelect: 'none',
         color: 'red',
-        transition: 'ease-in-out',
     },
-    toggleHover: {
-        transform: '1.1rem',
-        color: 'blue'
-
+    '@keyframes closeNav': {
+        from: {right: 0,},
+        to: {right: -300}
+    },
+    '@keyframes openNav': {
+        from: {right: -300},
+        to: {right: 0}
     }
 });
 
